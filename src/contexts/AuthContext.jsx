@@ -63,10 +63,29 @@ export const AuthProvider = ({ children }) => {
 
     return { success: true };
   };
-
   const logout = () => {
     setUser(null);
     localStorage.removeItem("user");
+  };
+
+  const updateProfile = (updatedData) => {
+    try {
+      // Actualizar la lista de usuarios en localStorage
+      const users = JSON.parse(localStorage.getItem("users") || "[]");
+      const updatedUsers = users.map((u) =>
+        u.id === user.id ? { ...u, ...updatedData } : u
+      );
+      localStorage.setItem("users", JSON.stringify(updatedUsers));
+
+      // Actualizar el usuario actual
+      const updatedUser = { ...user, ...updatedData };
+      setUser(updatedUser);
+      localStorage.setItem("user", JSON.stringify(updatedUser));
+
+      return { success: true };
+    } catch {
+      return { success: false, error: "Error al actualizar el perfil" };
+    }
   };
 
   const value = {
@@ -75,6 +94,7 @@ export const AuthProvider = ({ children }) => {
     login,
     register,
     logout,
+    updateProfile,
     isAuthenticated: !!user,
   };
 

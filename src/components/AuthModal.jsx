@@ -96,28 +96,26 @@ const AuthModal = ({ isOpen, onClose, mode, onSwitchMode }) => {
   };
 
   if (!isOpen) return null;
-
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-      <div className="bg-white rounded-lg p-6 w-full max-w-md relative">
+    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+      <div className="bg-white rounded-lg p-4 sm:p-6 w-full max-w-md relative">
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 text-gray-500 hover:text-gray-700"
+          className="absolute top-3 right-3 sm:top-4 sm:right-4 text-gray-500 hover:text-gray-700 p-1"
         >
-          <X size={24} />
+          <X size={20} className="sm:hidden" />
+          <X size={24} className="hidden sm:block" />
         </button>
-
-        <h2 className="text-2xl font-bold mb-6 text-center">
+        <h2 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6 text-center pr-8">
           {mode === "login" ? "Iniciar Sesión" : "Crear Cuenta"}
-        </h2>
-
+        </h2>{" "}
         {error && (
-          <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-4">
+          <div className="bg-red-100 border border-red-400 text-red-700 px-3 sm:px-4 py-2 sm:py-3 rounded mb-3 sm:mb-4 text-sm sm:text-base">
             {error}
           </div>
         )}
-
-        <form onSubmit={handleSubmit} className="space-y-4">
+        <form onSubmit={handleSubmit} className="space-y-3 sm:space-y-4">
+          {" "}
           {mode === "register" && (
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-1">
@@ -129,12 +127,11 @@ const AuthModal = ({ isOpen, onClose, mode, onSwitchMode }) => {
                 value={formData.name}
                 onChange={handleChange}
                 required
-                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm sm:text-base"
                 placeholder="Tu nombre completo"
               />
             </div>
           )}
-
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-1">
               Correo electrónico
@@ -145,11 +142,10 @@ const AuthModal = ({ isOpen, onClose, mode, onSwitchMode }) => {
               value={formData.email}
               onChange={handleChange}
               required
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm sm:text-base"
               placeholder="tu@email.com"
             />
           </div>
-
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-1">
               Contraseña
@@ -173,7 +169,6 @@ const AuthModal = ({ isOpen, onClose, mode, onSwitchMode }) => {
               </button>
             </div>
           </div>
-
           {mode === "register" && (
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-1">
@@ -190,7 +185,6 @@ const AuthModal = ({ isOpen, onClose, mode, onSwitchMode }) => {
               />
             </div>
           )}
-
           <button
             type="submit"
             disabled={loading}
@@ -203,7 +197,6 @@ const AuthModal = ({ isOpen, onClose, mode, onSwitchMode }) => {
               : "Crear Cuenta"}
           </button>
         </form>
-
         <div className="mt-4 text-center">
           <p className="text-sm text-gray-600">
             {mode === "login" ? "¿No tienes cuenta?" : "¿Ya tienes cuenta?"}

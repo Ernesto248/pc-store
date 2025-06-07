@@ -55,13 +55,15 @@ const Home = () => {
         onPriceSort={setSortOrder}
         selectedCategory={selectedCategory}
         sortOrder={sortOrder}
-      />
+      />{" "}
       {/* Contenido principal */}
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-8">
         {/* Información de filtros activos */}
-        <div className="mb-6">
-          <div className="flex flex-wrap items-center gap-4 text-sm text-gray-600">
-            <span>Mostrando {filteredProducts.length} productos</span>
+        <div className="mb-4 sm:mb-6">
+          <div className="flex flex-wrap items-center gap-2 sm:gap-4 text-xs sm:text-sm text-gray-600">
+            <span className="font-medium">
+              Mostrando {filteredProducts.length} productos
+            </span>
             {searchTerm && <span>• Búsqueda: "{searchTerm}"</span>}
             {selectedCategory && <span>• Categoría: {selectedCategory}</span>}
             {sortOrder && (
@@ -75,20 +77,21 @@ const Home = () => {
 
         {/* Grid de productos */}
         {filteredProducts.length > 0 ? (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
             {filteredProducts.map((product) => (
               <ProductCard key={product.id} product={product} />
             ))}
           </div>
         ) : (
-          <div className="text-center py-16">
+          <div className="text-center py-12 sm:py-16">
             <div className="text-gray-400 mb-4">
-              <ShoppingCart size={64} className="mx-auto" />
+              <ShoppingCart size={48} className="mx-auto sm:hidden" />
+              <ShoppingCart size={64} className="mx-auto hidden sm:block" />
             </div>
-            <h3 className="text-xl font-semibold text-gray-600 mb-2">
+            <h3 className="text-lg sm:text-xl font-semibold text-gray-600 mb-2">
               No se encontraron productos
             </h3>
-            <p className="text-gray-500">
+            <p className="text-sm sm:text-base text-gray-500 px-4">
               Intenta ajustar tus filtros o términos de búsqueda
             </p>
           </div>

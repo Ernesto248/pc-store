@@ -8,7 +8,7 @@ export const products = [
     price: 589.99,
     description:
       "Procesador de alto rendimiento para gaming y aplicaciones profesionales",
-    image: "https://m.media-amazon.com/images/I/61jBB8vGJoL._AC_SL1500_.jpg",
+    image: "/images/cpu.jpg",
     stock: 15,
     specs: {
       cores: 24,
@@ -23,7 +23,7 @@ export const products = [
     category: "CPU",
     price: 449.99,
     description: "Procesador AMD de última generación con arquitectura Zen 4",
-    image: "https://m.media-amazon.com/images/I/61onOaJQAFL._AC_SL1200_.jpg",
+    image: "/images/cpu.jpg",
     stock: 12,
     specs: {
       cores: 12,
@@ -38,7 +38,7 @@ export const products = [
     category: "CPU",
     price: 319.99,
     description: "Procesador de gama media ideal para gaming",
-    image: "https://m.media-amazon.com/images/I/61Z9wYlQ0OL._AC_SL1500_.jpg",
+    image: "/images/cpu.jpg",
     stock: 20,
     specs: {
       cores: 14,
@@ -54,7 +54,7 @@ export const products = [
     category: "RAM",
     price: 129.99,
     description: "Memoria RAM de alto rendimiento con iluminación RGB",
-    image: "https://m.media-amazon.com/images/I/71oDmRrWB5L._AC_SL1500_.jpg",
+    image: "/images/ram.jpg",
     stock: 25,
     specs: {
       capacity: "32GB (2x16GB)",
@@ -69,7 +69,7 @@ export const products = [
     category: "RAM",
     price: 189.99,
     description: "Memoria DDR5 de última generación para máximo rendimiento",
-    image: "https://m.media-amazon.com/images/I/71kNbGsrJAL._AC_SL1500_.jpg",
+    image: "/images/ram.jpg",
     stock: 18,
     specs: {
       capacity: "32GB (2x16GB)",
@@ -84,7 +84,7 @@ export const products = [
     category: "RAM",
     price: 59.99,
     description: "Memoria RAM confiable para uso general",
-    image: "https://m.media-amazon.com/images/I/61WNK1CRVUL._AC_SL1500_.jpg",
+    image: "/images/ram.jpg",
     stock: 30,
     specs: {
       capacity: "16GB (2x8GB)",
@@ -101,7 +101,7 @@ export const products = [
     price: 1599.99,
     description:
       "Tarjeta gráfica de última generación para gaming 4K y ray tracing",
-    image: "https://m.media-amazon.com/images/I/81bc5H2BHUL._AC_SL1500_.jpg",
+    image: "/images/gpu.jpg",
     stock: 8,
     specs: {
       memory: "24GB GDDR6X",
@@ -116,7 +116,7 @@ export const products = [
     category: "GPU",
     price: 999.99,
     description: "Tarjeta gráfica potente con arquitectura RDNA 3",
-    image: "https://m.media-amazon.com/images/I/81kDfb7LJaL._AC_SL1500_.jpg",
+    image: "/images/gpu.jpg",
     stock: 10,
     specs: {
       memory: "24GB GDDR6",
@@ -131,7 +131,7 @@ export const products = [
     category: "GPU",
     price: 599.99,
     description: "Excelente opción para gaming 1440p",
-    image: "https://m.media-amazon.com/images/I/71qWqJ6M+QL._AC_SL1500_.jpg",
+    image: "/images/gpu.jpg",
     stock: 15,
     specs: {
       memory: "12GB GDDR6X",
@@ -147,7 +147,7 @@ export const products = [
     category: "Almacenamiento",
     price: 199.99,
     description: "SSD NVMe de alta velocidad para carga rápida de aplicaciones",
-    image: "https://m.media-amazon.com/images/I/71sSOkBcLmL._AC_SL1500_.jpg",
+    image: "/images/almacenamiento.jpg",
     stock: 22,
     specs: {
       capacity: "2TB",
@@ -162,7 +162,7 @@ export const products = [
     category: "Almacenamiento",
     price: 129.99,
     description: "SSD gaming optimizado para mejor rendimiento",
-    image: "https://m.media-amazon.com/images/I/614TDPVfRkL._AC_SL1500_.jpg",
+    image: "/images/almacenamiento.jpg",
     stock: 28,
     specs: {
       capacity: "1TB",
@@ -177,7 +177,7 @@ export const products = [
     category: "Almacenamiento",
     price: 89.99,
     description: "Disco duro tradicional para almacenamiento masivo",
-    image: "https://m.media-amazon.com/images/I/81fjVl-JiiL._AC_SL1500_.jpg",
+    image: "/images/almacenamiento.jpg",
     stock: 35,
     specs: {
       capacity: "4TB",
@@ -194,7 +194,7 @@ export const products = [
     price: 429.99,
     description:
       "Placa madre premium para procesadores Intel de 12va y 13va generación",
-    image: "https://m.media-amazon.com/images/I/91bXh-KKzjL._AC_SL1500_.jpg",
+    image: "/images/board.jpg",
     stock: 12,
     specs: {
       socket: "LGA 1700",
@@ -209,7 +209,7 @@ export const products = [
     category: "Motherboard",
     price: 249.99,
     description: "Placa madre confiable para procesadores AMD Ryzen 7000",
-    image: "https://m.media-amazon.com/images/I/81YMdYCOdGL._AC_SL1500_.jpg",
+    image: "/images/board.jpg",
     stock: 16,
     specs: {
       socket: "AM5",
@@ -225,7 +225,7 @@ export const products = [
     category: "PSU",
     price: 139.99,
     description: "Fuente de poder modular de alta eficiencia",
-    image: "https://m.media-amazon.com/images/I/81LCyFLduoL._AC_SL1500_.jpg",
+    image: "/images/psu.jpg",
     stock: 20,
     specs: {
       wattage: "850W",
@@ -240,7 +240,7 @@ export const products = [
     category: "PSU",
     price: 109.99,
     description: "Fuente confiable para sistemas de alto rendimiento",
-    image: "https://m.media-amazon.com/images/I/71e9H3EHQL._AC_SL1500_.jpg",
+    image: "/images/psu.jpg",
     stock: 18,
     specs: {
       wattage: "750W",
